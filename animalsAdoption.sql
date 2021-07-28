@@ -56,7 +56,9 @@ SELECT DISTINCT type FROM animals;
 # WHERE - IN
 SELECT * FROM animals;
 SELECT age FROM animals WHERE age IN (8, 3, 10, 4);
-SELECT name, type, age FROM animals WHERE type IN ('cat');
+SELECT name, type, age FROM animals WHERE type IN ('cat','dog','gerbil');
 
 
 # CHAINING WHERE $$ COMPARISON OPERATORS
+SELECT name FROM animals WHERE age > 6 AND type = 'dog';
+SELECT name, type FROM animals WHERE is_adoptable = 1 AND age < 5 AND type = 'cat';
