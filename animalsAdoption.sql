@@ -14,6 +14,7 @@ CREATE TABLE animals (
     size TEXT,
     is_adoptable TINYINT(1),
     is_cute TINYINT(1),
+    day_created DATE,
     PRIMARY KEY (animal_id)
 );
 DESCRIBE animals;
@@ -78,8 +79,36 @@ SELECT name, type, age FROM animals ORDER BY type ASC;
 
 # LIMIT Clause - limits what we're getting back instead of getting too much data
 
-SELECT * FROM animals;
+SELECT SELECT * FROM animals;
 SELECT name FROM animals WHERE type - 'dog' LIMIT 3 OFFSET 2;
 SELECT type FROM animals;
 
 # SELECT name, CONCAT(name,'the ',type, 'is up for adoption')
+
+# CONCAT
+SELECT name, type, CONCAT(name, 'the', type, ' is up
+for adoption') FROM animals;
+
+# NOT LIKE
+SELECT DISTINCT type, name from animals WHERE name NOT LIKE '%e%';
+SELECT name from animals WHERE name NOT LIKE '%y';
+
+# DATE
+SELECT DAY('2002-6-09');
+
+SELECT DAYOFMONTH('2002-06-09');
+SELECT NOW();
+SELECT CURTIME();
+SELECT CURDATE();
+
+SELECT name, CONCAT(name + ' was adopted on ' + CURDATE()) FROM animals;
+
+# MONTH
+
+# YEAR
+
+# NOW
+
+# UNIX TIMESTAMP - number of seconds since jan 1st 1970 - returns integer
+# SELECT
+
