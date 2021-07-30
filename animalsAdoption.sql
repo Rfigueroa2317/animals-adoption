@@ -79,7 +79,7 @@ SELECT name, type, age FROM animals ORDER BY type ASC;
 
 # LIMIT Clause - limits what we're getting back instead of getting too much data
 
-SELECT SELECT * FROM animals;
+SELECT * FROM animals;
 SELECT name FROM animals WHERE type - 'dog' LIMIT 3 OFFSET 2;
 SELECT type FROM animals;
 
@@ -111,4 +111,6 @@ SELECT name, CONCAT(name + ' was adopted on ' + CURDATE()) FROM animals;
 
 # UNIX TIMESTAMP - number of seconds since jan 1st 1970 - returns integer
 # SELECT
+
+
 
