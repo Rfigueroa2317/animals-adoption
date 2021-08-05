@@ -114,3 +114,4 @@ SELECT name, CONCAT(name + ' was adopted on ' + CURDATE()) FROM animals;
 
 
 
+
