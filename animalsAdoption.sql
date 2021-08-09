@@ -111,7 +111,3 @@ SELECT name, CONCAT(name + ' was adopted on ' + CURDATE()) FROM animals;
 
 # UNIX TIMESTAMP - number of seconds since jan 1st 1970 - returns integer
 # SELECT
-
-
-
-
